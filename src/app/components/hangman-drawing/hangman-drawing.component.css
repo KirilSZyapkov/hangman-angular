@@ -1,0 +1,23 @@
+.wraper {
+  position: relative;
+}
+
+.bottem-bar {
+  height: 10px;
+  width: 250px;
+  background-color: black;
+}
+
+.vertical-bar {
+  height: 400px;
+  width: 10px;
+  background-color: black;
+  margin-left: 120px;
+}
+
+.top-horizontal-bar {
+  width: 200px;
+  height: 10px;
+  margin-left: 120px;
+  background-color: black;
+}
