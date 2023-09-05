@@ -1,0 +1,32 @@
+.wraper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 0.5rem;
+}
+
+.keybord-button {
+  width: 100%;
+  border: 3px solid black;
+  background: none;
+  aspect-ratio: 1/1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-size: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.keybord-button.active{
+background-color: hsl(200, 100%, 50%);
+color: white;
+}
+
+.keybord-button.inactive{
+    opacity: .3;
+}
+
+.keybord-button:hover:not(:disabled),
+.keybord-button:focus:not(:disabled) {
+    background-color: hsl(200, 100%, 75%);
+}

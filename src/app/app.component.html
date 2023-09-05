@@ -1,6 +1,8 @@
 <section class="wraper">
   <header class="header-display">Lose Win</header>
   <app-hangman-drawing></app-hangman-drawing>
-  <app-hangman-word></app-hangman-word>
-  <app-keybord></app-keybord>
+  <app-hangman-word [word]="word" [guessedLetters]="guessedLetters"></app-hangman-word>
+  <div class="keybord">
+    <app-keybord></app-keybord>
+  </div>
 </section>

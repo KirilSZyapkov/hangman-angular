@@ -22,11 +22,74 @@
   background-color: black;
 }
 
-.tor-vertical-bar{
-    position: absolute;
-    width: 10px;
-    height: 50px;
-    background-color: black;
-    top: 5px;
-    right: 0px;
+.tor-vertical-bar {
+  position: absolute;
+  width: 10px;
+  height: 50px;
+  background-color: black;
+  top: 0px;
+  right: 0px;
+}
+
+.head {
+  width: 50px;
+  height: 50px;
+  border: 10px solid black;
+  border-radius: 100%;
+  position: absolute;
+  right: -20px;
+  top: 50px;
+}
+
+.body {
+  height: 150px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+
+.right-arm {
+  height: 80px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  rotate: 45deg;
+  transform-origin: left bottom;
+  top: 70px;
+  right: 0px;
+}
+
+.left-arm {
+  height: 80px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  rotate: -45deg;
+  transform-origin: right bottom;
+  top: 70px;
+  right: 0px;
+}
+
+.right-leg {
+  height: 80px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  rotate: -35deg;
+  transform-origin: top;
+  top: 250px;
+  right: 0px;
+}
+
+.left-leg {
+  height: 80px;
+  width: 10px;
+  background-color: black;
+  position: absolute;
+  rotate: 35deg;
+  transform-origin: top;
+  top: 250px;
+  right: 0px;
 }

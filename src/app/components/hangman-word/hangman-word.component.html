@@ -1,1 +1,9 @@
-<p>hangman-word works!</p>
+<section class="wraper">
+    <div class="letter" *ngFor="let letter of word">
+
+        <span  [ngStyle]="{'visibility': guessedLetters.includes(letter)? 'visible' : 'hidden'}">
+            {{letter}}
+        </span>
+
+    </div>
+</section>

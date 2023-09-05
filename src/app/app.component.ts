@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hangman';
+  word: string[] = ['t', 'e', 's', 't',"e", "r"];
+  guessedLetters: string[] = ['t', 's', 'g'];
+
 }
