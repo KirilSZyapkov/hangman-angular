@@ -1,12 +1,10 @@
 <section class="wraper">
-    <div class="left-leg"></div>
-    <div class="right-leg"></div>
-    <div class="left-arm"></div>
-    <div class="right-arm"></div>
-    <div class="body"></div>
-    <div class="head"></div>
+    {{show()}}
+    <div *ngFor="let item of body_parts.slice(0, incorrectLetters)" class={{item}}></div>
+    
     <div class="tor-vertical-bar"></div>
     <div class="top-horizontal-bar"></div>
-<div class="vertical-bar"></div>
-<div class="bottem-bar"></div>
+    <div class="vertical-bar"></div>
+    <div class="bottem-bar"></div>
 </section>
+<!-- <span [innerHTML]="item"></span> -->
