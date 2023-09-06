@@ -1,5 +1,5 @@
 <section class="wraper">
 <div *ngFor="let key of keys">
-    <button class="keybord-button">{{key}}</button>
+    <button (click)="btnClick($event)" class="keybord-button">{{key}}</button>
 </div>
 </section>
