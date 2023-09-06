@@ -3,6 +3,6 @@
   <app-hangman-drawing [incorrectLetters]="incorrectLetters.length"></app-hangman-drawing>
   <app-hangman-word [word]="word" [guessedLetters]="guessedLetters"></app-hangman-word>
   <div class="keybord">
-    <app-keybord></app-keybord>
+    <app-keybord (keyBordClicked)="guessedLetter($event)"></app-keybord>
   </div>
 </section>

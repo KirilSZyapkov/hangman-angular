@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { words } from 'word';
 
 @Component({
@@ -7,7 +7,7 @@ import { words } from 'word';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @Input()
+  
   title = 'hangman';
   word: string[] = words[Math.floor(Math.random() * words.length)].split('');
   
@@ -15,4 +15,9 @@ export class AppComponent {
   incorrectLetters: string[] = this.guessedLetters.filter(
     (letter) => !this.word.includes(letter)
   );
+
+  guessedLetter(letter: string){
+    console.log(letter);
+    this.guessedLetters.push(letter);
+  }
 }
