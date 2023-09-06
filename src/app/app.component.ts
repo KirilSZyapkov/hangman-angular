@@ -16,8 +16,16 @@ export class AppComponent {
     (letter) => !this.word.includes(letter)
   );
 
-  guessedLetter(letter: string){
+  guessedLetter(letter: string): void{
     console.log(letter);
     this.guessedLetters.push(letter);
+    this.incorrectLetter();
   }
+
+  incorrectLetter(): void{
+    this.incorrectLetters = this.guessedLetters.filter(
+      (letter) => !this.word.includes(letter)
+    );
+  }
+
 }
