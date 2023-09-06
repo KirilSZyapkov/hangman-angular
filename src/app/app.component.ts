@@ -12,10 +12,8 @@ export class AppComponent {
   word: string[] = words[Math.floor(Math.random() * words.length)].split('');
   
   guessedLetters: string[] = [];
-  incorrectLetters: string[] = this.guessedLetters.filter(
-    (letter) => !this.word.includes(letter)
-  );
-
+  incorrectLetters: string[] = [];
+  
   guessedLetter(letter: string): void{
     console.log(letter);
     this.guessedLetters.push(letter);
