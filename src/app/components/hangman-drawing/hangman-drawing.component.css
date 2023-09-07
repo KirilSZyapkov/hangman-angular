@@ -47,7 +47,7 @@
   background-color: black;
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 99px;
 }
 
 .right-arm {
@@ -79,7 +79,7 @@
   position: absolute;
   rotate: -35deg;
   transform-origin: top;
-  top: 248px;
+  top: 247px;
   right: 0px;
 }
 
@@ -90,6 +90,6 @@
   position: absolute;
   rotate: 35deg;
   transform-origin: top;
-  top: 248px;
+  top: 247px;
   right: 0px;
 }
