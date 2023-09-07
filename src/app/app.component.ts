@@ -9,7 +9,7 @@ import { words } from 'word';
 export class AppComponent {
   @HostListener('window:keypress', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    console.log(event.key);
+    if (this.guessedLetters.includes(event.key)) return;
     this.guessedLetters.push(event.key);
     this.incorrectLetter();
   }
@@ -20,7 +20,8 @@ export class AppComponent {
   incorrectLetters: string[] = [];
 
   guessedLetter(letter: string): void {
-    console.log(letter);
+    if (this.guessedLetters.includes(letter)) return;
+
     this.guessedLetters.push(letter);
     this.incorrectLetter();
   }
@@ -30,7 +31,7 @@ export class AppComponent {
       (letter) => !this.word.includes(letter)
     );
   }
-  show(e: Event) {
-    console.log(e);
-  }
+  // show(e: Event) {
+  //   console.log(e);
+  // }
 }
