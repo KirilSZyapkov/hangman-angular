@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-keybord',
@@ -7,6 +7,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class KeybordComponent {
   @Output() keyBordClicked = new EventEmitter();
+  @Input() activeLetters: string[] = [];
+  @Input() incorrectLetters: string[] = [];
   keys: string[] = [
     'a',
     'b',
@@ -37,6 +39,8 @@ export class KeybordComponent {
   ];
 
   btnClick(e: Event) {
+    console.log(this.activeLetters);
+    
     const target: any = e.target;
     const letter: string = target.textContent;
     this.keyBordClicked.emit(letter);

@@ -1,9 +1,11 @@
-<section  class="wraper">
+<section class="wraper">
 
   <header class="header-display">Lose Win</header>
   <app-hangman-drawing [incorrectLetters]="incorrectLetters.length"></app-hangman-drawing>
   <app-hangman-word [word]="word" [guessedLetters]="guessedLetters"></app-hangman-word>
   <div class="keybord">
-    <app-keybord (keyBordClicked)="guessedLetter($event)"></app-keybord>
+    <app-keybord (keyBordClicked)="guessedLetter($event)"
+      [activeLetters]="activeLetters"
+      [incorrectLetters]="incorrectLetters"></app-keybord>
   </div>
 </section>

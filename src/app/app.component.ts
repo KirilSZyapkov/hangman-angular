@@ -15,23 +15,26 @@ export class AppComponent {
   }
   title = 'hangman';
   word: string[] = words[Math.floor(Math.random() * words.length)].split('');
-
   guessedLetters: string[] = [];
   incorrectLetters: string[] = [];
+  activeLetters: string[] = [];
 
   guessedLetter(letter: string): void {
-    if (this.guessedLetters.includes(letter)) return;
+    console.log(this.word);
+    if (this.guessedLetters.includes(letter.trim())) return;
+    this.guessedLetters.push(letter.trim());
+    this.activeLetters = this.guessedLetters.filter((l) =>
+      this.word.includes(l.trim())
+    );
 
-    this.guessedLetters.push(letter);
     this.incorrectLetter();
   }
 
   incorrectLetter(): void {
     this.incorrectLetters = this.guessedLetters.filter(
-      (letter) => !this.word.includes(letter)
+      (letter) => !this.word.includes(letter.trim())
     );
+
+    console.log(this.incorrectLetters);
   }
-  // show(e: Event) {
-  //   console.log(e);
-  // }
 }
