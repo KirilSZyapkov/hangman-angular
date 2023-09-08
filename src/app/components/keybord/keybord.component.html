@@ -1,7 +1,7 @@
 <section class="wraper">
     <div *ngFor="let key of keys">
-        <button (click)="btnClick($event)" class="keybord-button {{activeLetters.includes(key.trim())?'active':''}}"
-            [ngStyle]="{'disabled': incorrectLetters.includes(key)}">
+        <button (click)="btnClick($event)" class="keybord-button {{activeLetters.includes(key.trim())?'active':''}} {{incorrectLetters.includes(key.trim())?'inactive':''}}"
+            [disabled]="incorrectLetters.includes(key.trim())">
             {{key}}
         </button>
     </div>
