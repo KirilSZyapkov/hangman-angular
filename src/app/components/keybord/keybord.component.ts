@@ -38,9 +38,7 @@ export class KeybordComponent {
     'z',
   ];
 
-  btnClick(e: Event) {
-    console.log(this.activeLetters);
-    
+  btnClick(e: Event) {    
     const target: any = e.target;
     const letter: string = target.textContent;
     this.keyBordClicked.emit(letter);
