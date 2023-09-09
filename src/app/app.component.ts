@@ -17,6 +17,7 @@ export class AppComponent {
     this.incorrectLetter();
   }
   title = 'hangman';
+  whatIsTheWord: string = 'Guess the Word?';
   word: string[] = words[Math.floor(Math.random() * words.length)].split('');
   guessedLetters: string[] = [];
   incorrectLetters: string[] = [];
@@ -30,11 +31,22 @@ export class AppComponent {
     );
 
     this.incorrectLetter();
+
+    const wordToGuess = this.word.join('');
+    const rightLettersGuessed = this.activeLetters.join('');
+
+    if(this.incorrectLetters.length >= 6){
+      this.whatIsTheWord = 'You loose! Refresh to try again.'
+    } else if(wordToGuess === rightLettersGuessed) {
+      this.whatIsTheWord = 'You won! Refresh to try again.'
+    }
   }
 
   incorrectLetter(): void {
     this.incorrectLetters = this.guessedLetters.filter(
       (letter) => !this.word.includes(letter.trim())
     );
+
+    
   }
 }
