@@ -16,9 +16,4 @@ export class HangmanDrawingComponent {
     "left-leg",
     "right-leg"
   ];
-
-  show() {
-    console.log(this.incorrectLetters);
-  }
-
 }

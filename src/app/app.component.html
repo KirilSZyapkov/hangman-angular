@@ -6,6 +6,8 @@
   <div class="keybord">
     <app-keybord (keyBordClicked)="guessedLetter($event)"
       [activeLetters]="activeLetters"
-      [incorrectLetters]="incorrectLetters"></app-keybord>
+      [incorrectLetters]="incorrectLetters"
+      [isWinner]="isWinner"
+      [isLooser]="isLooser"></app-keybord>
   </div>
 </section>

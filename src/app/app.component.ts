@@ -22,23 +22,23 @@ export class AppComponent {
   guessedLetters: string[] = [];
   incorrectLetters: string[] = [];
   activeLetters: string[] = [];
-
+  isWinner: boolean = false;
+  isLooser: boolean = false;
+  
   guessedLetter(letter: string): void {
     if (this.guessedLetters.includes(letter.trim())) return;
     this.guessedLetters.push(letter.trim());
-    this.activeLetters = this.guessedLetters.filter((l) =>
-      this.word.includes(l.trim())
-    );
+    this.activeLetters = this.guessedLetters.filter((l) => this.word.includes(l));
 
     this.incorrectLetter();
 
-    const wordToGuess = this.word.join('');
-    const rightLettersGuessed = this.activeLetters.join('');
+    this.isWinner = this.word.every(l=> this.activeLetters.includes(l));
+    this.isLooser = this.incorrectLetters.length >= 6;
 
-    if(this.incorrectLetters.length >= 6){
-      this.whatIsTheWord = 'You loose! Refresh to try again.'
-    } else if(wordToGuess === rightLettersGuessed) {
-      this.whatIsTheWord = 'You won! Refresh to try again.'
+    if (this.isLooser) {
+      this.whatIsTheWord = 'You loose! Refresh to try again.';
+    } else if (this.isWinner) {
+      this.whatIsTheWord = 'You won! Refresh to try again.';
     }
   }
 
@@ -46,7 +46,5 @@ export class AppComponent {
     this.incorrectLetters = this.guessedLetters.filter(
       (letter) => !this.word.includes(letter.trim())
     );
-
-    
   }
 }

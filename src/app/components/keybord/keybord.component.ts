@@ -9,6 +9,8 @@ export class KeybordComponent {
   @Output() keyBordClicked = new EventEmitter();
   @Input() activeLetters: string[] = [];
   @Input() incorrectLetters: string[] = [];
+  @Input() isWinner:boolean = false ;
+  @Input() isLooser: boolean = false;
   keys: string[] = [
     'a',
     'b',
