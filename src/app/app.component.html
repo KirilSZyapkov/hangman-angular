@@ -2,7 +2,8 @@
 
   <header class="header-display">{{whatIsTheWord}}</header>
   <app-hangman-drawing [incorrectLetters]="incorrectLetters.length"></app-hangman-drawing>
-  <app-hangman-word [word]="word" [guessedLetters]="guessedLetters"></app-hangman-word>
+  <app-hangman-word [word]="word" [guessedLetters]="guessedLetters"
+  [reveil]="reveil"></app-hangman-word>
   <div class="keybord">
     <app-keybord (keyBordClicked)="guessedLetter($event)"
       [activeLetters]="activeLetters"

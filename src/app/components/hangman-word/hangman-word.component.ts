@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hangman-word.component.css'],
 })
 export class HangmanWordComponent {
- 
   @Input() word: string[] = [];
-  @Input()guessedLetters: string[] = [];
+  @Input() guessedLetters: string[] = [];
+  @Input() reveil: boolean = false;
+  @Input() isLooser: boolean = false;
 
- 
 }

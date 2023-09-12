@@ -1,7 +1,7 @@
 <section class="wraper">
     <div class="letter" *ngFor="let letter of word">
 
-        <span  [ngStyle]="{'visibility': guessedLetters.includes(letter)? 'visible' : 'hidden'}">
+        <span  [ngStyle]="{'visibility': guessedLetters.includes(letter) || reveil ? 'visible' : 'hidden', 'color': !guessedLetters.includes(letter) && reveil ? 'red' : 'black'}">
             {{letter}}
         </span>
 
